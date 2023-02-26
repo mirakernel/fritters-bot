@@ -23,7 +23,6 @@ bot.command('getchatid', (ctx) => {
     ctx.reply(`Ваш chat ID: ${chatId}`);
   });
 
-
 // Обработка сообщений
 bot.on('photo', (ctx) => {
     const photo = ctx.message.photo[0].file_id;
