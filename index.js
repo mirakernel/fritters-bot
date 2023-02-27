@@ -1,8 +1,9 @@
 const { Telegraf } = require('telegraf');
 const rateLimit = require('telegraf-ratelimit');
+require('dotenv').config();
 
-const bot = new Telegraf('6228082361:AAHphN_mLTRP7qG-Wi3GCbMyqKWL9Ew00rk');
-const MODERATOR_CHAT_ID = '498989662';
+const bot = new Telegraf(process.env.BOT_TOKEN);
+const MODERATOR_CHAT_ID = process.env.MODERATOR_CHAT_ID;
 
 const limitConfig = {
     window: 5000, // Время, в течение которого происходит ограничение (в миллисекундах)
